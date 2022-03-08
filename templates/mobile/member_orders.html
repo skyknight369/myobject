@@ -1,0 +1,63 @@
+{% extends 'mobile/base.html' %}
+{% load static from staticfiles %}
+
+{% block mainbody %}
+	<!--头部-->
+	<header>
+		<div class="header">
+			<h1>我的订单</h1>
+			<a href="{% url 'mobile_member_index' %}" class="return"><i></i></a>
+		</div>
+	</header>
+	
+	<!--内容区-->
+	<article class="main-container">
+		
+		<!--选项卡-->
+		<nav class="memberOrder-nav line"><a href="#" class="line select">全部</a><a href="#" class="line">排队中</a><a href="#">已完成</a></nav>
+		<div class="memberOrder-header"></div>
+		
+		<!--列表-->
+		<div class="memberOrder-list line" onclick="location.href='{% url 'mobile_member_detail' %}'">
+			<p>订单编号：201505101551<span>（排队中）</span></p>
+			<div class="order-product line">
+				<ul>
+					<li><img src="{% static 'mobile/img/img02.jpg' %}" alt=""><img src="{% static 'mobile/img/img06.jpg' %}" alt=""><img src="{% static 'mobile/img/img07.jpg' %}" alt=""><img src="{% static 'mobile/img/img08.jpg' %}" alt=""></li>
+				</ul>
+			</div>
+			<p>共<span>9</span>件，总价：<span>￥117.00</span></p>
+		</div>
+		
+		<div class="memberOrder-list line">
+			<p>订单编号：201505101551<span>（已完成）</span></p>
+			<div class="order-product line">
+				<ul>
+					<li><img src="{% static 'mobile/img/img01.jpg' %}" alt=""><img src="{% static 'mobile/img/img03.jpg' %}" alt=""><img src="{% static 'mobile/img/img04.jpg' %}" alt=""><img src="{% static 'mobile/img/img05.jpg' %}" alt=""></li>
+				</ul>
+			</div>
+			<p>共<span>9</span>件，总价：<span>￥117.00</span></p>
+		</div>
+		
+		<div class="memberOrder-list line">
+			<p>订单编号：201505101551<span>（已完成）</span></p>
+			<div class="order-product line">
+				<ul>
+					<li><img src="{% static 'mobile/img/img09.jpg' %}" alt=""><img src="{% static 'mobile/img/img10.jpg' %}" alt=""><img src="{% static 'mobile/img/img11.jpg' %}" alt=""><img src="{% static 'mobile/img/img12.jpg' %}" alt=""></li>
+				</ul>
+			</div>
+			<p>共<span>9</span>件，总价：<span>￥117.00</span></p>
+		</div>
+		
+		<div class="memberOrder-list line">
+			<p>订单编号：201505101551<span>（已完成）</span></p>
+			<div class="order-product line">
+				<ul>
+					<li><img src="{% static 'mobile/img/img13.jpg' %}" alt=""><img src="{% static 'mobile/img/img14.jpg' %}" alt=""><img src="{% static 'mobile/img/img15.jpg' %}" alt=""><img src="{% static 'mobile/img/img16.jpg' %}" alt=""></li>
+				</ul>
+			</div>
+			<p>共<span>9</span>件，总价：<span>￥117.00</span></p>
+		</div>
+		
+	</article>
+{% endblock %}
+
